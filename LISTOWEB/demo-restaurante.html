@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=5">
+<title>Restaurante La Terraza Azul | Cocina Mediterránea en Valencia</title>
+<meta name="description" content="Restaurante La Terraza Azul: cocina mediterránea de autor en el centro de Valencia. Reserva tu mesa y disfruta de los mejores arroces, mariscos y tapas con vistas.">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://www.laterrazaazul.es/">
+<meta property="og:title" content="Restaurante La Terraza Azul | Cocina Mediterránea en Valencia">
+<meta property="og:description" content="Cocina mediterránea de autor en Valencia. Los mejores arroces, mariscos y tapas con terraza panorámica.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.laterrazaazul.es/">
+<meta property="og:locale" content="es_ES">
+<meta property="og:site_name" content="La Terraza Azul">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Restaurant","name":"La Terraza Azul","description":"Restaurante de cocina mediterránea de autor en el centro de Valencia.","url":"https://www.laterrazaazul.es","telephone":"+34961234567","email":"reservas@laterrazaazul.es","servesCuisine":"Mediterránea","priceRange":"€€€","address":{"@type":"PostalAddress","streetAddress":"Calle de la Paz 22","addressLocality":"Valencia","addressRegion":"Comunidad Valenciana","postalCode":"46003","addressCountry":"ES"},"geo":{"@type":"GeoCoordinates","latitude":39.4702,"longitude":-0.3768},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],"opens":"13:00","closes":"16:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":["Thursday","Friday","Saturday"],"opens":"20:00","closes":"23:30"}],"image":"https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1200","aggregateRating":{"@type":"AggregateRating","ratingValue":"4.8","reviewCount":"312"}}</script>
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#0c0a08;--bg2:#1a1714;--bg3:#231f1a;--primary:#c0392b;--primary-d:#a02f24;--primary-l:#e74c3c;--accent:#d4a853;--white:#faf8f5;--white2:#ede8e0;--gray:#9a9187;--gray-d:#5a554e;--font-head:'Playfair Display',Georgia,serif;--font:'Inter',system-ui,sans-serif;--transition:.3s cubic-bezier(.4,0,.2,1);--radius:12px}
+html{scroll-behavior:smooth;font-size:16px}
+body{font-family:var(--font);background:var(--bg);color:var(--white);line-height:1.6;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+img{max-width:100%;height:auto;display:block}a{text-decoration:none;color:inherit}ul{list-style:none}
+button{cursor:pointer;border:none;font-family:inherit;background:none}
+.container{width:100%;max-width:1100px;margin:0 auto;padding:0 20px}
+
+/* HEADER */
+.header{position:fixed;top:0;left:0;width:100%;z-index:100;padding:16px 0;transition:background .4s,box-shadow .4s,padding .4s}
+.header.scrolled{background:rgba(12,10,8,.95);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);box-shadow:0 1px 0 rgba(255,255,255,.04);padding:10px 0}
+.header-inner{display:flex;align-items:center;justify-content:space-between}
+.logo{font-family:var(--font-head);font-size:1.5rem;font-weight:700;letter-spacing:-.02em;color:var(--white)}
+.logo span{color:var(--accent)}
+.nav{display:none;gap:8px}
+.nav a{font-size:.88rem;font-weight:500;color:var(--gray);padding:7px 14px;border-radius:8px;transition:var(--transition)}
+.nav a:hover{color:var(--white);background:rgba(255,255,255,.05)}
+.header-cta{display:none}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font-weight:600;font-size:.9rem;border-radius:8px;padding:11px 24px;transition:var(--transition);min-height:44px;white-space:nowrap}
+.btn-p{background:var(--primary);color:#fff;box-shadow:0 2px 12px rgba(192,57,43,.3)}.btn-p:hover{background:var(--primary-d);transform:translateY(-1px);box-shadow:0 4px 20px rgba(192,57,43,.4)}
+.btn-s{color:var(--white);border:1.5px solid var(--gray-d)}.btn-s:hover{border-color:var(--accent);color:var(--accent)}
+.btn-wa{background:#25D366;color:#fff}.btn-wa:hover{background:#1ebe5a;transform:translateY(-1px)}
+.menu-btn{display:flex;flex-direction:column;gap:5px;padding:10px;z-index:101;min-height:44px;min-width:44px;align-items:center;justify-content:center}
+.menu-btn span{display:block;width:22px;height:2px;background:var(--white);border-radius:2px;transition:var(--transition)}
+.menu-btn.open span:nth-child(1){transform:rotate(45deg) translate(5px,5px)}.menu-btn.open span:nth-child(2){opacity:0}.menu-btn.open span:nth-child(3){transform:rotate(-45deg) translate(5px,-5px)}
+.mob-nav{position:fixed;inset:0;background:var(--bg);z-index:100;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:6px;opacity:0;visibility:hidden;pointer-events:none;transition:opacity .3s,visibility .3s}
+.mob-nav.open{opacity:1;visibility:visible;pointer-events:auto}
+.mob-nav a{font-family:var(--font-head);font-size:1.5rem;font-weight:600;padding:12px 20px;transition:var(--transition)}.mob-nav a:hover{color:var(--accent)}
+.mob-nav-ctas{display:flex;gap:10px;margin-top:28px}
+
+/* HERO */
+.hero{position:relative;min-height:100vh;min-height:100dvh;display:flex;align-items:center;justify-content:center;text-align:center;padding:120px 20px 80px;overflow:clip}
+.hero-bg{position:absolute;inset:0;z-index:0}
+.hero-bg img{width:100%;height:100%;object-fit:cover}
+.hero-bg::after{content:'';position:absolute;inset:0;background:linear-gradient(to bottom,rgba(12,10,8,.5),rgba(12,10,8,.8))}
+.hero-content{position:relative;z-index:2;max-width:700px}
+.hero-tag{display:inline-block;font-size:.72rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);border:1px solid rgba(212,168,83,.3);padding:7px 18px;border-radius:50px;margin-bottom:24px}
+.hero h1{font-family:var(--font-head);font-size:clamp(2.2rem,6vw,4.2rem);font-weight:800;line-height:1.08;letter-spacing:-.02em;margin-bottom:18px}
+.hero h1 em{font-style:normal;color:var(--accent)}
+.hero-sub{color:var(--white2);font-size:clamp(1rem,2vw,1.2rem);margin-bottom:36px;max-width:500px;margin-left:auto;margin-right:auto}
+.hero-ctas{display:flex;flex-wrap:wrap;gap:12px;justify-content:center}
+
+/* SECTION BASE */
+.section{padding:80px 0}
+.section-dark{background:var(--bg)}
+.section-warm{background:var(--bg2)}
+.section-deep{background:var(--bg3)}
+.stag{display:inline-block;font-size:.72rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin-bottom:14px}
+.section-head{text-align:center;max-width:600px;margin:0 auto 48px}
+.section-head h2{font-family:var(--font-head);font-size:clamp(1.6rem,4vw,2.8rem);font-weight:700;line-height:1.12;margin-bottom:10px}
+.section-head p{color:var(--gray);font-size:clamp(.95rem,1.6vw,1.05rem)}
+
+/* SPECIALTIES */
+.cards-grid{display:grid;grid-template-columns:1fr;gap:20px}
+.card{position:relative;border-radius:var(--radius);overflow:hidden;background:var(--bg3);transition:transform .4s,box-shadow .4s}
+.card:hover{transform:translateY(-4px);box-shadow:0 20px 50px rgba(0,0,0,.4)}
+.card-img{width:100%;aspect-ratio:4/3;overflow:hidden}
+.card-img img{width:100%;height:100%;object-fit:cover;transition:transform .6s}
+.card:hover .card-img img{transform:scale(1.06)}
+.card-body{padding:20px}
+.card-body h3{font-family:var(--font-head);font-size:1.2rem;font-weight:600;margin-bottom:6px}
+.card-body p{color:var(--gray);font-size:.9rem}
+.card-price{color:var(--accent);font-weight:700;font-size:1rem;margin-top:8px}
+
+/* ABOUT */
+.about-grid{display:grid;grid-template-columns:1fr;gap:40px;align-items:center}
+.about-img{border-radius:var(--radius);overflow:hidden;aspect-ratio:4/3}
+.about-img img{width:100%;height:100%;object-fit:cover}
+.about-text h2{font-family:var(--font-head);font-size:clamp(1.6rem,3.5vw,2.4rem);font-weight:700;margin-bottom:16px;line-height:1.15}
+.about-text p{color:var(--gray);margin-bottom:14px;font-size:.95rem}
+.about-text p strong{color:var(--white)}
+
+/* REVIEWS */
+.reviews-grid{display:grid;grid-template-columns:1fr;gap:16px}
+.review{background:var(--bg3);border-radius:var(--radius);padding:24px;border:1px solid rgba(255,255,255,.04)}
+.review-stars{color:var(--accent);font-size:.9rem;margin-bottom:10px;letter-spacing:2px}
+.review p{color:var(--white2);font-size:.92rem;font-style:italic;margin-bottom:12px;line-height:1.6}
+.review-author{font-size:.8rem;color:var(--gray);font-weight:600}
+
+/* HOURS */
+.hours-card{max-width:500px;margin:0 auto;background:var(--bg3);border-radius:var(--radius);padding:32px;border:1px solid rgba(255,255,255,.04)}
+.hours-row{display:flex;justify-content:space-between;padding:10px 0;border-bottom:1px solid rgba(255,255,255,.04);font-size:.92rem}
+.hours-row:last-child{border-bottom:none}
+.hours-row .day{color:var(--white)}
+.hours-row .time{color:var(--accent);font-weight:600}
+.hours-row .closed{color:var(--gray);font-style:italic}
+
+/* CTA */
+.final-cta{text-align:center;position:relative;overflow:clip;padding:100px 0}
+.final-cta::before{content:'';position:absolute;top:50%;left:50%;width:500px;height:500px;background:radial-gradient(circle,rgba(192,57,43,.1),transparent 70%);transform:translate(-50%,-50%);pointer-events:none}
+.final-cta h2{font-family:var(--font-head);font-size:clamp(1.6rem,4vw,2.8rem);font-weight:700;margin-bottom:14px;position:relative}
+.final-cta p{color:var(--gray);margin-bottom:32px;position:relative}
+.cta-btns{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;position:relative}
+
+/* MAP */
+.map-section{background:var(--bg3)}
+.map-placeholder{width:100%;height:300px;border-radius:var(--radius);overflow:hidden;background:var(--bg2);display:flex;align-items:center;justify-content:center;color:var(--gray);font-size:.9rem;border:1px solid rgba(255,255,255,.04)}
+
+/* CONTACT */
+.contact-grid{display:grid;grid-template-columns:1fr;gap:32px;margin-top:32px}
+.contact-item{display:flex;align-items:flex-start;gap:14px}
+.contact-icon{width:44px;height:44px;border-radius:10px;background:rgba(192,57,43,.1);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.contact-icon svg{width:20px;height:20px;color:var(--primary-l)}
+.contact-info h4{font-size:.9rem;font-weight:600;margin-bottom:2px}
+.contact-info p,.contact-info a{color:var(--gray);font-size:.88rem;transition:color .3s}
+.contact-info a:hover{color:var(--accent)}
+
+/* FOOTER */
+.footer{background:#080604;padding:40px 0;text-align:center;color:var(--gray);font-size:.82rem}
+.footer .logo{display:inline-block;margin-bottom:12px}
+.footer p{margin-bottom:6px}
+.footer-links{display:flex;gap:16px;justify-content:center;margin-top:10px;flex-wrap:wrap}
+.footer-links a{transition:color .3s}.footer-links a:hover{color:var(--accent)}
+
+/* WHATSAPP FLOAT */
+.wa-float{position:fixed;bottom:24px;right:24px;width:56px;height:56px;background:#25D366;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(37,211,102,.4);z-index:90;transition:transform .3s,box-shadow .3s}
+.wa-float:hover{transform:scale(1.1);box-shadow:0 6px 28px rgba(37,211,102,.5)}
+.wa-float svg{width:28px;height:28px;color:#fff}
+
+/* FLOAT BAR MOBILE */
+.float-bar{position:fixed;bottom:0;left:0;width:100%;display:flex;z-index:99;box-shadow:0 -2px 20px rgba(0,0,0,.3)}
+.float-bar a{flex:1;display:flex;align-items:center;justify-content:center;gap:8px;padding:15px;font-weight:600;font-size:.88rem;color:#fff}
+.float-bar .fb-call{background:var(--primary)}.float-bar .fb-wa{background:#25D366}
+
+/* BACK LINK */
+.back-link{position:fixed;top:16px;left:16px;z-index:101;font-size:.78rem;font-weight:600;color:var(--gray);background:rgba(12,10,8,.8);backdrop-filter:blur(10px);padding:8px 14px;border-radius:50px;transition:var(--transition);border:1px solid rgba(255,255,255,.06)}
+.back-link:hover{color:var(--white);border-color:rgba(255,255,255,.15)}
+
+/* REVEAL */
+.rv{opacity:0;transform:translateY(28px);transition:opacity .6s ease,transform .6s ease}.rv.show{opacity:1;transform:none}
+.rv-d1{transition-delay:.1s}.rv-d2{transition-delay:.2s}.rv-d3{transition-delay:.3s}
+
+/* RESPONSIVE */
+@media(min-width:768px){
+.container{padding:0 40px}.section{padding:100px 0}
+.cards-grid{grid-template-columns:repeat(3,1fr)}
+.about-grid{grid-template-columns:1fr 1fr}
+.reviews-grid{grid-template-columns:repeat(2,1fr)}
+.contact-grid{grid-template-columns:repeat(3,1fr)}
+}
+@media(min-width:1025px){
+.menu-btn{display:none}.nav{display:flex}.header-cta{display:block}
+.float-bar{display:none}
+}
+@media(max-width:1024px){.footer{padding-bottom:72px}.wa-float{bottom:80px}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important}html{scroll-behavior:auto}.rv{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<a href="index.html" class="back-link">← ListoWeb</a>
+
+<header class="header" id="hdr"><div class="container header-inner">
+<a href="#" class="logo">La Terraza <span>Azul</span></a>
+<nav class="nav"><a href="#carta">Carta</a><a href="#nosotros">Nosotros</a><a href="#opiniones">Opiniones</a><a href="#horario">Horario</a><a href="#contacto">Contacto</a></nav>
+<div class="header-cta"><a href="tel:+34961234567" class="btn btn-p btn-sm" style="padding:9px 18px;font-size:.82rem">Reservar mesa</a></div>
+<button class="menu-btn" id="menuBtn" aria-label="Menú"><span></span><span></span><span></span></button>
+</div></header>
+
+<nav class="mob-nav" id="mobNav">
+<a href="#carta" class="mn-link">Carta</a><a href="#nosotros" class="mn-link">Nosotros</a><a href="#opiniones" class="mn-link">Opiniones</a><a href="#horario" class="mn-link">Horario</a><a href="#contacto" class="mn-link">Contacto</a>
+<div class="mob-nav-ctas"><a href="tel:+34961234567" class="btn btn-p">Reservar</a><a href="https://wa.me/34961234567" target="_blank" rel="noopener" class="btn btn-wa">WhatsApp</a></div>
+</nav>
+
+<div class="float-bar">
+<a href="tel:+34961234567" class="fb-call">📞 Reservar</a>
+<a href="https://wa.me/34961234567" target="_blank" rel="noopener" class="fb-wa">💬 WhatsApp</a>
+</div>
+
+<!-- HERO -->
+<section class="hero" id="home">
+<div class="hero-bg"><img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1400&h=900&fit=crop" alt="Interior del restaurante La Terraza Azul" loading="eager"></div>
+<div class="hero-content">
+<div class="hero-tag">📍 Centro de Valencia — Desde 2012</div>
+<h1>Cocina mediterránea <em>de autor</em> con terraza panorámica</h1>
+<p class="hero-sub">Arroces, mariscos y tapas con los mejores productos de la huerta y del mar valenciano.</p>
+<div class="hero-ctas"><a href="tel:+34961234567" class="btn btn-p">Reservar mesa</a><a href="#carta" class="btn btn-s">Ver nuestra carta</a></div>
+</div>
+</section>
+
+<!-- SPECIALTIES -->
+<section class="section section-warm" id="carta"><div class="container">
+<div class="section-head rv"><div class="stag">Nuestra carta</div><h2>Especialidades de la casa</h2><p>Productos frescos del Mercado Central de Valencia, cocinados con técnica y pasión</p></div>
+<div class="cards-grid">
+<div class="card rv rv-d1">
+<div class="card-img"><img src="https://images.unsplash.com/photo-1534080564583-6be75777b70a?w=600&h=450&fit=crop" alt="Paella valenciana tradicional" loading="lazy"></div>
+<div class="card-body"><h3>Paella valenciana</h3><p>Arroz bomba, pollo, conejo, judía verde, garrofó y azafrán de La Mancha. Para 2 personas.</p><div class="card-price">Desde 28€</div></div>
+</div>
+<div class="card rv rv-d2">
+<div class="card-img"><img src="https://images.unsplash.com/photo-1615141982883-c7ad0e69fd62?w=600&h=450&fit=crop" alt="Mariscos frescos del día" loading="lazy"></div>
+<div class="card-body"><h3>Mariscada del día</h3><p>Selección de gambas rojas, cigalas, almejas y mejillones del litoral valenciano.</p><div class="card-price">Desde 38€</div></div>
+</div>
+<div class="card rv rv-d3">
+<div class="card-img"><img src="https://images.unsplash.com/photo-1544025162-d76694265947?w=600&h=450&fit=crop" alt="Tapas mediterráneas de autor" loading="lazy"></div>
+<div class="card-body"><h3>Tapas de autor</h3><p>Croquetas de jamón ibérico, pulpo a la brasa, tartar de atún rojo y más creaciones.</p><div class="card-price">Desde 6€</div></div>
+</div>
+</div>
+</div></section>
+
+<!-- ABOUT -->
+<section class="section section-dark" id="nosotros"><div class="container">
+<div class="about-grid">
+<div class="about-img rv"><img src="https://images.unsplash.com/photo-1556910103-1c02745aae4d?w=800&h=600&fit=crop" alt="Chef de La Terraza Azul preparando un plato" loading="lazy"></div>
+<div class="about-text rv">
+<div class="stag">Nuestra historia</div>
+<h2>Tradición mediterránea con un toque contemporáneo</h2>
+<p>Desde 2012 en el corazón de Valencia, <strong>La Terraza Azul</strong> fusiona la cocina mediterránea más auténtica con técnicas modernas. Nuestro chef, formado en los mejores restaurantes de la costa levantina, selecciona personalmente cada producto en el Mercado Central.</p>
+<p>La terraza con vistas a la Plaza de la Reina es nuestro rincón favorito. Un espacio donde la brisa del Mediterráneo acompaña cada bocado. <strong>Más de 300 reseñas con 4.8 de media</strong> nos avalan.</p>
+</div>
+</div>
+</div></section>
+
+<!-- REVIEWS -->
+<section class="section section-warm" id="opiniones"><div class="container">
+<div class="section-head rv"><div class="stag">Opiniones</div><h2>Lo que dicen nuestros clientes</h2><p>Más de 300 reseñas en Google con 4.8 estrellas de media</p></div>
+<div class="reviews-grid">
+<div class="review rv rv-d1"><div class="review-stars">★★★★★</div><p>La mejor paella que hemos probado en Valencia. Producto fresco, servicio impecable y las vistas desde la terraza son espectaculares.</p><div class="review-author">María G. — Google</div></div>
+<div class="review rv rv-d2"><div class="review-stars">★★★★★</div><p>Fuimos por recomendación y no nos decepcionó. Las tapas de autor son una experiencia. Volveremos seguro.</p><div class="review-author">Carlos R. — TripAdvisor</div></div>
+<div class="review rv rv-d1"><div class="review-stars">★★★★★</div><p>Celebramos nuestro aniversario aquí y fue perfecto. El trato cercano del equipo y la calidad de los platos hacen que quieras volver.</p><div class="review-author">Laura & Pedro — Google</div></div>
+<div class="review rv rv-d2"><div class="review-stars">★★★★☆</div><p>Muy buena relación calidad-precio para la ubicación. El arroz del senyoret estaba increíble. Solo mejoraría el tiempo de espera.</p><div class="review-author">Antonio V. — Google</div></div>
+</div>
+</div></section>
+
+<!-- HOURS -->
+<section class="section section-dark" id="horario"><div class="container">
+<div class="section-head rv"><div class="stag">Horario</div><h2>Cuándo visitarnos</h2><p>Abrimos mediodías de martes a domingo y cenas de jueves a sábado</p></div>
+<div class="hours-card rv">
+<div class="hours-row"><span class="day">Lunes</span><span class="closed">Cerrado</span></div>
+<div class="hours-row"><span class="day">Martes — Miércoles</span><span class="time">13:00 – 16:00</span></div>
+<div class="hours-row"><span class="day">Jueves — Viernes</span><span class="time">13:00 – 16:00 / 20:00 – 23:30</span></div>
+<div class="hours-row"><span class="day">Sábado</span><span class="time">13:00 – 16:00 / 20:00 – 23:30</span></div>
+<div class="hours-row"><span class="day">Domingo</span><span class="time">13:00 – 16:30</span></div>
+</div>
+</div></section>
+
+<!-- CTA -->
+<section class="section final-cta section-warm" id="reservar"><div class="container">
+<div class="section-head rv"><div class="stag">Reservas</div><h2>Tu mesa te espera en La Terraza Azul</h2><p>Reserva directamente por teléfono o WhatsApp. También aceptamos walk-ins según disponibilidad.</p></div>
+<div class="cta-btns rv">
+<a href="tel:+34961234567" class="btn btn-p">📞 Llamar para reservar</a>
+<a href="https://wa.me/34961234567?text=Hola%2C%20quiero%20reservar%20una%20mesa" target="_blank" rel="noopener" class="btn btn-wa">💬 Reservar por WhatsApp</a>
+</div>
+</div></section>
+
+<!-- MAP -->
+<section class="section map-section" id="contacto"><div class="container">
+<div class="section-head rv"><div class="stag">Ubicación</div><h2>Cómo llegar</h2><p>En pleno centro de Valencia, a 2 minutos de la Plaza de la Reina</p></div>
+<div class="map-placeholder rv">
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3080.0!2d-0.3768!3d39.4702!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMznCsDI4JzEyLjciTiAwwrAyMic0My43Ilc!5e0!3m2!1ses!2ses!4v1" width="100%" height="100%" style="border:0;border-radius:12px" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Ubicación de La Terraza Azul"></iframe>
+</div>
+<div class="contact-grid rv">
+<div class="contact-item"><div class="contact-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div><div class="contact-info"><h4>Dirección</h4><p>Calle de la Paz 22, 46003 Valencia</p></div></div>
+<div class="contact-item"><div class="contact-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2A19.86 19.86 0 0 1 3.07 8.67 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.81.36 1.6.7 2.33a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.73.34 1.52.58 2.33.7A2 2 0 0 1 22 16.92z"/></svg></div><div class="contact-info"><h4>Teléfono</h4><a href="tel:+34961234567">+34 961 234 567</a></div></div>
+<div class="contact-item"><div class="contact-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22 6 12 13 2 6"/></svg></div><div class="contact-info"><h4>Email</h4><a href="mailto:reservas@laterrazaazul.es">reservas@laterrazaazul.es</a></div></div>
+</div>
+</div></section>
+
+<!-- FOOTER -->
+<footer class="footer"><div class="container">
+<div class="logo">La Terraza <span>Azul</span></div>
+<p>Cocina mediterránea de autor en Valencia — Desde 2012</p>
+<p>&copy; 2025 Restaurante La Terraza Azul. Todos los derechos reservados.</p>
+<div class="footer-links"><a href="#">Aviso legal</a><a href="#">Privacidad</a><a href="#">Cookies</a></div>
+<p style="margin-top:16px;font-size:.75rem;opacity:.5">Web diseñada por <a href="index.html" style="color:inherit;text-decoration:underline">ListoWeb</a></p>
+</div></footer>
+
+<!-- WA FLOAT -->
+<a href="https://wa.me/34961234567?text=Hola%2C%20quiero%20reservar%20una%20mesa" target="_blank" rel="noopener" class="wa-float" aria-label="Contactar por WhatsApp">
+<svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
+</a>
+
+<script>
+(function(){'use strict';
+var hdr=document.getElementById('hdr');
+window.addEventListener('scroll',function(){hdr.classList.toggle('scrolled',window.scrollY>60)},{passive:true});
+
+var menuBtn=document.getElementById('menuBtn'),mobNav=document.getElementById('mobNav');
+function closeNav(){menuBtn.classList.remove('open');mobNav.classList.remove('open');document.body.style.overflow=''}
+menuBtn.addEventListener('click',function(){var o=mobNav.classList.contains('open');o?closeNav():(this.classList.add('open'),mobNav.classList.add('open'),document.body.style.overflow='hidden')});
+mobNav.querySelectorAll('a').forEach(function(a){a.addEventListener('click',closeNav)});
+window.addEventListener('resize',function(){if(mobNav.classList.contains('open'))closeNav()});
+
+var rvEls=document.querySelectorAll('.rv');
+if('IntersectionObserver'in window){var obs=new IntersectionObserver(function(en){en.forEach(function(e){if(e.isIntersecting){e.target.classList.add('show');obs.unobserve(e.target)}})},{threshold:.05,rootMargin:'0px 0px -20px 0px'});rvEls.forEach(function(e){obs.observe(e)});var scrollRv=function(){rvEls.forEach(function(e){if(!e.classList.contains('show')&&e.getBoundingClientRect().top<window.innerHeight+40)e.classList.add('show')})};window.addEventListener('scroll',scrollRv,{passive:true});window.addEventListener('touchmove',scrollRv,{passive:true});setTimeout(scrollRv,200);setTimeout(function(){var s=0;rvEls.forEach(function(e){if(e.classList.contains('show'))s++});if(s<rvEls.length*.4)rvEls.forEach(function(e){e.classList.add('show')})},3500)}else rvEls.forEach(function(e){e.classList.add('show')});
+
+document.querySelectorAll('a[href^="#"]').forEach(function(a){a.addEventListener('click',function(e){var t=this.getAttribute('href');if(t==='#')return;var el=document.querySelector(t);if(el){e.preventDefault();window.scrollTo({top:el.offsetTop-70,behavior:'smooth'})}})});
+})();
+</script>
+</body>
+</html>
